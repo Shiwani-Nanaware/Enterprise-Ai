@@ -1,5 +1,5 @@
 /**
- * Login page — premium enterprise login with animated background.
+ * Login page — enterprise login with animated background.
  */
 
 import * as React from "react";
@@ -33,14 +33,14 @@ const floatingItems = [
 export default function LoginPage() {
   const navigate = useNavigate();
   const { setAuth } = useAuthStore();
+  const [showPassword, setShowPassword] = React.useState(false);
+  const [apiError, setApiError] = React.useState<string | null>(null);
+
   const clearChatForUser = React.useCallback((userId: string) => {
-    // Lazily import to avoid circular deps
     import("@/store/chat-store").then(({ useChatStore }) => {
       useChatStore.getState().clearForUser(userId);
     });
   }, []);
-  const [showPassword, setShowPassword] = React.useState(false);
-  const [apiError, setApiError] = React.useState<string | null>(null);
 
   const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema),
