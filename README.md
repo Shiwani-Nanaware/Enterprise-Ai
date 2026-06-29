@@ -1,8 +1,5 @@
 # Enterprise AI Knowledge Assistant
 
-> A production-ready, secure RAG platform for FinSolve Technologies — powered by Groq LLaMA3, MongoDB Atlas, and local HuggingFace embeddings.
-
-![Architecture](https://via.placeholder.com/900x400/4F46E5/FFFFFF?text=Enterprise+AI+Knowledge+Assistant)
 
 ---
 
@@ -293,6 +290,3 @@ Built a **production-ready Enterprise RAG platform** featuring:
 - **Clean Architecture** — Repository pattern, Service layer, Dependency Injection, Pydantic v2
 - **Zero-cost AI pipeline** — free embeddings + Groq free tier = $0/month to run
 
----
-
-*Built for FinSolve Technologies — Enterprise AI Knowledge Assistant v1.0*
