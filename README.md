@@ -241,52 +241,9 @@ Services:
 - Frontend: http://localhost:5173
 - MongoDB: localhost:27017
 
----
 
-## Deployment
 
-### Backend — Render
 
-1. Create a new **Web Service** on [render.com](https://render.com)
-2. Connect your GitHub repository
-3. Set root directory to `backend/`
-4. Build command: `pip install -r requirements.txt`
-5. Start command: `uvicorn main:app --host 0.0.0.0 --port $PORT`
-6. Add all environment variables from `.env`
 
-### Frontend — Vercel
 
-1. Import project on [vercel.com](https://vercel.com)
-2. Set root directory to `frontend/`
-3. Framework: Vite
-4. Add environment variable: `VITE_API_BASE_URL=https://your-backend.onrender.com`
-
----
-
-## Future Improvements
-
-- [ ] LangSmith tracing integration
-- [ ] RAGAS evaluation pipeline
-- [ ] Real-time streaming responses (SSE)
-- [ ] Multi-tenant support
-- [ ] SAML/SSO authentication
-- [ ] Document versioning
-- [ ] Background job queue (Celery/Redis)
-- [ ] Kubernetes deployment manifests
-- [ ] OpenTelemetry metrics
-
----
-
-## Resume Highlights
-
-Built a **production-ready Enterprise RAG platform** featuring:
-
-- **Full-stack TypeScript + Python** — React 19 frontend + FastAPI async backend
-- **MongoDB Atlas** — Motor async driver, compound indexes, aggregation pipelines
-- **ChromaDB** — persistent vector store with RBAC metadata pre-filtering
-- **HuggingFace Embeddings** — local BAAI/bge-small-en-v1.5 (no API cost)
-- **Groq LLM Integration** — llama3-70b-8192 via OpenAI-compatible API
-- **Enterprise Security** — JWT + RBAC, guardrails engine (PII masking, injection detection), rate limiting, audit logs
-- **Clean Architecture** — Repository pattern, Service layer, Dependency Injection, Pydantic v2
-- **Zero-cost AI pipeline** — free embeddings + Groq free tier = $0/month to run
 
